@@ -39,7 +39,7 @@ const Header = () => {
           </li>
         </ul>
         <div className="flex items-center justify-center gap-x-2 md:gap-x-3">
-          <a className="w-7 h-7 md:w-8 md:h-8 flex items-center justify-center rounded-full border-2 border-white text-white hover:text-black hover:bg-white transition-all duration-300 ease-in-out" href="mailto:qa.hamzahanif@gmail.com?subject=Hello&body=I want to contact you.">
+          <a className="w-7 h-7 md:w-8 md:h-8 flex items-center justify-center rounded-full border-2 border-white text-white hover:text-black hover:bg-white transition-all duration-300 ease-in-out" href="mailto:m.hamzaqa9@gmail.com?subject=Hello&body=I want to contact you.">
           <SiGmail />
           </a>
          
