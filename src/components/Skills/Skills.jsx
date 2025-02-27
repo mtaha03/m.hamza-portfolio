@@ -68,7 +68,7 @@ const Skills = () => {
             ) : (
               <div className="w-full transition-opacity duration-500 opacity-100">
                 <Swiper
-                  slidesPerView={1}
+                  slidesPerView={3}
                   spaceBetween={20}
                   breakpoints={{
                     640: { slidesPerView: 2 },
