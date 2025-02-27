@@ -17,44 +17,35 @@ const Skills = () => {
   ];
 
   return (
-    <section id="skills">
+    <section id="skills" className="w-full">
       <div
-        className="w-full flex items-center justify-center p-10"
-        style={{
-          backgroundImage: "url('/assets/skills.png')",
-          backgroundSize: "cover",
-          backgroundPosition: "center",
-          backgroundRepeat: "no-repeat",
-          backgroundAttachment: "fixed",
-        }}
+        className="w-full flex items-center justify-center p-3 md:p-10 bg-cover bg-center bg-no-repeat bg-fixed"
+        style={{ backgroundImage: "url('/assets/skills.png')" }}
       >
-        <div className="w-full bg-transparent rounded-4xl flex flex-col items-center justify-center">
-          <h1 className="mb-10 text-white text-xl sm:text-2xl md:text-3xl font-bold text-center">
+        <div className="w-full max-w-5xl bg-transparent rounded-4xl flex flex-col items-center justify-center">
+          <h1 className="mb-6 sm:mb-10 text-white text-lg sm:text-2xl md:text-3xl font-bold text-center">
             Skills
           </h1>
 
           {/* Tabs */}
-          <div className="body w-full flex justify-center">
-            <div className="tabs flex gap-4">
-              <button
-                className={`p-2 px-4 rounded-lg text-white ${activeTab === "testing" ? "bg-purple-700" : "bg-gray-600"}`}
-                onClick={() => setActiveTab("testing")}
-              >
-                Testing Skills
-              </button>
-              <button
-                className={`p-2 px-4 rounded-lg text-white ${activeTab === "domain" ? "bg-purple-700" : "bg-gray-600"}`}
-                onClick={() => setActiveTab("domain")}
-              >
-                Domain Expertise
-              </button>
+          <div className="w-full flex justify-center">
+            <div className="flex gap-3 sm:gap-4">
+              {['testing', 'domain'].map((tab) => (
+                <button
+                  key={tab}
+                  className={`p-2 sm:p-3 px-4 rounded-lg text-white transition-all ${activeTab === tab ? "bg-purple-700" : "bg-gray-600"}`}
+                  onClick={() => setActiveTab(tab)}
+                >
+                  {tab === "testing" ? "Testing Skills" : "Domain Expertise"}
+                </button>
+              ))}
             </div>
           </div>
 
           {/* Skills List */}
           <div className="bg-[#171717] rounded-2xl p-5 text-white w-full mt-6">
             {activeTab === "testing" ? (
-              <div className="flex flex-wrap justify-center gap-2 sm:gap-4 transition-opacity duration-500 opacity-100">
+              <div className="flex flex-wrap justify-center gap-2 sm:gap-3 md:gap-4 transition-opacity duration-500 opacity-100">
                 {testingSkills.map((skill, index) => (
                   <p
                     key={index}
@@ -68,10 +59,10 @@ const Skills = () => {
             ) : (
               <div className="w-full transition-opacity duration-500 opacity-100">
                 <Swiper
-                  slidesPerView={2.5}
-                  spaceBetween={20}
+                  slidesPerView={1}
+                  spaceBetween={15}
                   breakpoints={{
-                    640: { slidesPerView: 2 },
+                    480: { slidesPerView: 2 },
                     768: { slidesPerView: 3 },
                     1024: { slidesPerView: 4 },
                   }}
