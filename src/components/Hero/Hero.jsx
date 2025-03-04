@@ -2,7 +2,8 @@ import React from "react";
 import { FaArrowRightLong } from "react-icons/fa6";
 import { Link as ScrollLink } from "react-scroll";
 
-const Hero = () => {
+const Hero = ({ data }) => {
+  const { title, description } = data;
   return (
     <section id="hero">
       <div
@@ -19,11 +20,11 @@ const Hero = () => {
             Welcome to my Portfolio
           </button>
           <h1 className="mb-4 text-3xl sm:text-4xl md:text-5xl font-bold">
-            Hi! I'm M.Hamza
+            {title}
           </h1>
           <p className="mb-3 text-sm sm:text-base md:text-lg text-balance leading-relaxed">
-          Experienced in QA across FinTech, ride-hailing, and  <br /> banking, specializing in manual (70%) and automation <br /> (30%) testing with Selenium, Cypress, and JMeter to <br /> ensure system stability, efficiency, and 99.9% uptime.
-          </p>
+            {description} 
+            </p>
           <ScrollLink
             className="text-lg sm:text-xl flex items-center justify-center md:justify-start gap-x-3 cursor-pointer"
             to="contact"

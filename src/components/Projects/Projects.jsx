@@ -20,7 +20,7 @@ const Projects = () => {
 
         <div className="bg-[#171717] w-full p-5 sm:p-10">
           <div className="grid place-items-center grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-            <div className="card-1">
+            <div className="card-1 overflow-hidden">
               <div className="w-full h-full mx-auto flex justify-center relative overflow-hidden rounded-3xl">
                 <img
                   src="/assets/w1tty mokup.png"
@@ -34,7 +34,7 @@ const Projects = () => {
               </div>
             </div>
 
-            <div className="card-2">
+            <div className="card-2 overflow-hidden">
               <div className="w-full h-full mx-auto flex justify-center relative overflow-hidden rounded-3xl">
                 <img
                   src="/assets/jeeny mokup.png"
@@ -48,7 +48,7 @@ const Projects = () => {
               </div>
             </div>
 
-            <div className="card-3">
+            <div className="card-3 overflow-hidden">
               <div className="w-full h-full mx-auto flex justify-center relative overflow-hidden rounded-3xl">
                 <img
                   src="/assets/i2c mokup.png"

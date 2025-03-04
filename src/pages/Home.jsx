@@ -5,13 +5,15 @@ import Skills from '../components/Skills/Skills'
 import Projects from '../components/Projects/Projects'
 import Contact from '../components/Contact/Contact'
 import Footer from '../components/Footer/Footer'
+import data from '../HomePageData.json';
+
 
 const Home = () => {
+  const { heroData } = data;
   return (
     <>
       <Header />
-      <Hero />
-   
+      <Hero  data={heroData} />
       <Skills />
       <Projects />
       <Contact />
