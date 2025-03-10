@@ -22,7 +22,7 @@ const Skills = () => {
         className="w-full flex items-center justify-center p-3 md:p-10 bg-cover bg-center bg-no-repeat bg-fixed"
         style={{ backgroundImage: "url('/assets/skills.png')" }}
       >
-        <div className="w-full max-w-5xl bg-transparent rounded-4xl flex flex-col items-center justify-center">
+        <div className="w-full max-w-7xl bg-transparent rounded-4xl flex flex-col items-center justify-center">
           <h1 className="mb-6 sm:mb-10 text-white text-lg sm:text-2xl md:text-3xl font-bold text-center">
             Skills
           </h1>
