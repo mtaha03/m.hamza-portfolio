@@ -7,6 +7,7 @@ import CircularProgress from "../ProgressCircle/ProgressCircle";
 
 const Skills = () => {
   const [activeTab, setActiveTab] = useState("testing");
+  const [activeSkill, setActiveSkill] = useState(null);
 
   const testingSkills = [
     "Manual Testing", "Regression Testing", "Functional Testing", "Sanity Testing", "E2E Testing", "Load Testing",
@@ -45,17 +46,21 @@ const Skills = () => {
           {/* Skills List */}
           <div className="bg-[#171717] rounded-2xl p-5 text-white w-full mt-6">
             {activeTab === "testing" ? (
-              <div className="flex flex-wrap justify-center gap-2 sm:gap-3 md:gap-4 transition-opacity duration-500 opacity-100">
-                {testingSkills.map((skill, index) => (
-                  <p
-                    key={index}
-                    className={`p-2 sm:p-3 text-sm sm:text-md font-medium rounded-3xl transition-all duration-300 ease-in-out bg-transparent hover:text-lg hover:bg-gradient-to-r from-[#aa04ad] via-[#8a069f] to-[#41087e]
-                    ${index % 2 === 0 ? "translate-y-1" : "-translate-y-1"}`}
-                  >
-                    {skill}
-                  </p>
-                ))}
-              </div>
+                  <div className="flex flex-wrap justify-center gap-2 sm:gap-3 md:gap-4 transition-opacity duration-500 opacity-100">
+                  {testingSkills.map((skill, index) => (
+                    <p
+                      key={index}
+                      onClick={() => setActiveSkill(index)}
+                      className={`p-2 sm:p-3 text-sm sm:text-md font-medium rounded-3xl transition-all duration-300 ease-in-out cursor-pointer hover:bg-gradient-to-r from-[#aa04ad] via-[#8a069f] to-[#41087e]
+                        ${activeSkill === index 
+                          ? "text-lg bg-gradient-to-r from-[#aa04ad] via-[#8a069f] to-[#41087e]" 
+                          : "bg-transparent"} 
+                        ${index % 2 === 0 ? "translate-y-1" : "-translate-y-1"}`}
+                    >
+                      {skill}
+                    </p>
+                  ))}
+                </div>
             ) : (
               <div className="w-full transition-opacity duration-500 opacity-100">
                 <Swiper
